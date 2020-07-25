@@ -1,0 +1,55 @@
+{
+  "name": "Bardot",
+  "version": "0.0.1",
+  "description": "fun project - randomly exploding and draggable",
+  "engines": {
+    "node": ">=10.16.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "cross-env NODE_ENV=production gulp"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "babel-core": "6.26.3",
+    "babel-loader": "8.1.0",
+    "browser-sync": "2.26.7",
+    "cross-env": "7.0.2",
+    "del": "5.1.0",
+    "dotenv": "8.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "glob": "7.1.6",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "7.0.1",
+    "gulp-changed": "4.0.2",
+    "gulp-clean-css": "4.3.0",
+    "gulp-file-include": "2.2.2",
+    "gulp-if": "3.0.0",
+    "gulp-imagemin": "7.1.0",
+    "gulp-notify": "3.2.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-prompt": "1.2.0",
+    "gulp-purgecss": "2.1.2",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "4.1.0",
+    "gulp-sizereport": "1.2.1",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-svg-sprite": "1.5.0",
+    "gulp-svg-symbols": "^3.2.3",
+    "gulp-util": "3.0.8",
+    "gulp-watch": "5.0.1",
+    "imagemin-pngquant": "8.0.0",
+    "path": "0.12.7",
+    "require-dir": "1.2.0",
+    "run-sequence": "2.2.1",
+    "webpack": "4.43.0",
+    "webpack-dev-middleware": "3.7.2",
+    "webpack-hot-middleware": "2.25.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

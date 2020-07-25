@@ -1,0 +1,19 @@
+.info {
+  position: relative;
+  z-index: 2;
+  margin-left: percentage(40/1440);
+  margin-bottom: percentage(40/1440);
+  width: 55px;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: flex-end;
+  justify-content: space-between;
+  .rotate {
+    writing-mode:vertical-rl;
+    transform:scale(-1);
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,300 @@
+.page-home {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  &-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+}
+.layout {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  &-block {
+
+    .elem {
+      position: absolute;
+      width: auto;
+      transition: all .4s .3s ease-in;
+    }
+
+    &.various0 .elem {
+      &.logo {
+        @include d-height(39);
+        @include d-position(46, 40);
+      }
+
+      &.bottle {
+        @include d-height(780);
+        @include d-position(612, 122);
+      }
+
+      &.big-spot {
+        @include d-height(378);
+        @include d-position(542, 354);
+      }
+
+      &.small-spot {
+        @include d-height(171);
+        @include d-position(602, 705);
+      }
+
+      &.guys {
+        @include d-height(212);
+        @include d-position(642, 675);
+      }
+
+      &.text1 {
+        @include d-height(180);
+        @include d-position(517.04, 71.13);
+        width: 43.4%;
+        transform: rotate(-26.77deg);
+      }
+
+      &.text2 {
+        @include d-height(69.12);
+        @include d-position(521, 630.27);
+      }
+    }
+
+    &.various0.mixed {
+      .elem {
+        &.logo {
+          @include d-height(57.38);
+          @include d-position(1089.31, 249.65);
+          transform: rotate(116.43deg);
+        }
+
+        &.bottle {
+          @include d-height(780);
+          @include d-position(758.1, -329.41);
+          transform: rotate(-115.97deg);
+        }
+
+        &.big-spot {
+          @include d-height(378);
+          @include d-position(809.94, 759.02);
+          transform: rotate(-99.25deg);
+        }
+
+        &.small-spot {
+          @include d-height(171);
+          @include d-position(619, -75);
+        }
+
+        &.guys {
+          @include d-height(377);
+          @include d-position(597, 617);
+        }
+
+        &.text1 {
+          @include d-height(180);
+          @include d-position(-64.96,238.13);
+          width: 43.4%;
+          transform: rotate(-26.77deg);
+        }
+
+        &.text2 {
+          @include d-height(417);
+          @include d-position(252.3, 210.44);
+          transform: rotate(44.81deg);
+        }
+      }
+    }
+
+    &.various1 .elem {
+      &.logo {
+        @include d-height(39);
+        @include d-position(46, 40);
+      }
+
+      &.fish {
+        @include d-height(798.28);
+        @include d-position(585.24, 103);
+      }
+
+      &.blue-spot {
+        @include d-height(380.56);
+        @include d-position(522, 311.72);
+      }
+
+      &.seagrass {
+        @include d-height(363.66);
+        @include d-position(522, 103);
+      }
+
+      &.lady {
+        @include d-height(337);
+        @include d-position(543, 185);
+      }
+
+      &.alacarte {
+        @include d-height(110);
+        @include d-position(522, 523);
+      }
+
+      &.bonappetit {
+        @include d-height(151);
+        @include d-position(764, 156);
+      }
+
+      &.leaves {
+        @include d-height(353.42);
+        @include d-position(764, 485);
+      }
+    }
+
+    &.various1.mixed {
+      .elem {
+        &.logo {
+          @include d-height(273.09);
+          @include d-position(-72.25, 96.65);
+          transform: rotate(-23.96deg)
+        }
+
+        &.fish {
+          @include d-height(878.28);
+          @include d-position(812.29, 462.03);
+          transform: rotate(135.63deg);
+        }
+
+        &.blue-spot {
+          @include d-height(380.56);
+          @include d-position(1154, -149);
+        }
+
+        &.seagrass {
+          @include d-height(141);
+          @include d-position(1058.44, 767.69);
+          transform: rotate(50.93deg);
+        }
+
+        &.lady {
+          @include d-height(337);
+          @include d-position(912, 621);
+        }
+
+        &.alacarte {
+          @include d-height(110);
+          @include d-position(464, 591);
+        }
+
+        &.bonappetit {
+          @include d-height(151);
+          @include d-position(228.38, 56.34);
+          transform: rotate(-10.22deg);
+        }
+        &.leaves {
+          @include d-height(374.24);
+          @include d-position(908.04, 495.28);
+          transform: rotate(168.38deg);
+        }
+      }
+    }
+
+    &.various2 .elem {
+      &.logo {
+        @include d-height(39);
+        @include d-position(46, 40);
+      }
+
+      &.rooster {
+        @include d-height(440.15);
+        @include d-position(465.88, 342.56);
+        transform: rotate(-7.33deg);
+      }
+
+      &.big-spot {
+        @include d-height(455.07);
+        @include d-position(593.21, 143);
+      }
+
+      &.small-spot {
+        @include d-height(151.07);
+        @include d-position(810.69, 234.59);
+      }
+
+      &.person {
+        @include d-height(215.76);
+        @include d-position(893.61, 109.26);
+      }
+
+      &.text1 {
+        @include d-height(131.21);
+        @include d-position(641.81, 658.4);
+      }
+
+      &.text2 {
+        @include d-height(129.46);
+        @include d-position(231.68, 320.93);
+        transform: rotate(10.72deg);
+      }
+
+      &.leaves {
+        @include d-height(578.2);
+        @include d-position(561.17, 370.54);
+      }
+    }
+
+    &.various2.mixed {
+      .elem {
+        &.logo {
+          @include d-height(102.48);
+          @include d-position(79.45, 819.71);
+          transform: rotate(-98.7deg);
+        }
+
+        &.rooster {
+          @include d-height(324.43);
+          @include d-position(627.22, 490.87);
+          transform: rotate(-144.92deg);
+        }
+
+        &.big-spot {
+          @include d-height(692.57);
+          @include d-position(649.05, -242.99);
+          transform: rotate(-145.48deg);
+        }
+
+        &.small-spot {
+          @include d-height(162);
+          @include d-position(247.77, 424.79);
+          transform: rotate(-76.4deg);
+        }
+
+        &.person {
+          @include d-height(251.85);
+          @include d-position(1081.94, 157.98);
+          transform: rotate(64.49deg);
+        }
+
+        &.text1 {
+          @include d-height(151);
+          @include d-position(1318, 626);
+        }
+
+        &.text2 {
+          @include d-height(663.59);
+          @include d-position(-1471.75, -221.66);
+          transform: rotate(43.26deg);
+        }
+
+        &.leaves {
+          @include d-height(1015.37);
+          @include d-position(-31.63, 605.04);
+          transform: rotate(-71.24deg);
+        }
+      }
+    }
+  }
+
+}

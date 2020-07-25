@@ -1,0 +1,16 @@
+a {
+  color: $black;
+  outline: none;
+  text-decoration: none;
+}
+.refresh {
+  position: absolute;
+  @include d-position(1367, 40);
+  z-index: 10;
+  &-button {
+    width: 33px;
+    height: 35px;
+    display: block;
+    background: url('images/refresh.svg') center center no-repeat;
+  }
+}

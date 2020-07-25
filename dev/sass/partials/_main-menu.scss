@@ -1,0 +1,38 @@
+.menu {
+  position: relative;
+  z-index: 2;
+  &--main {
+    text-align: right;
+    margin-right: percentage(263/1440);
+    font-size: 24px;
+    line-height: 29px;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin: 0 percentage(37/1440);
+        a {
+          position: relative;
+          &:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: transparent;
+            display: block;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            margin-left: -5px;
+          }
+          &:hover {
+            &:after{
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

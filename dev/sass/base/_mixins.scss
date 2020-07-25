@@ -1,0 +1,20 @@
+@mixin d-height($x) {
+  height: percentage($x/1024);
+}
+@mixin d-width($x) {
+  height: percentage($x/1440);
+}
+@mixin m-height($x) {
+  height: percentage($x/667);
+}
+@mixin m-width($x) {
+  height: percentage($x/375);
+}
+@mixin d-position($x, $y) {
+  top: percentage($y/1024);
+  left: percentage($x/1440);
+}
+@mixin m-position($x, $y) {
+  top: percentage($y/667);
+  left: percentage($x/375);
+}
