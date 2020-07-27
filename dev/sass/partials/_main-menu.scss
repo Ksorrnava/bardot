@@ -6,6 +6,10 @@
     margin-right: percentage(263/1440);
     font-size: 24px;
     line-height: 29px;
+      @include mobile-only {
+        font-size: 14px;
+        line-height: 17px;
+      }
     ul {
       list-style: none;
       padding: 0;
@@ -35,4 +39,16 @@
       }
     }
   }
+    @include mobile-only {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 14px 18px 14px 12px;
+      margin: 0;
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
 }

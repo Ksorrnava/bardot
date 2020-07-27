@@ -28,7 +28,18 @@ const webpackConfig = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },{
+        test: /\.css$/,
+        loaders: ["style-loader","css-loader"]
       },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        loader:"file-loader",
+        options:{
+          name:'[name].[ext]',
+          outputPath:'assets/images/'
+        }
+      }
     ],
   },
   resolve: {
@@ -40,14 +51,17 @@ const webpackConfig = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    })
+       $: "jquery",
+       jQuery: "jquery",
+       "window.jQuery": "jquery'",
+       "window.$": "jquery"
+   })
   ],
-  externals: {
-    $: 'jquery',
-   jquery: 'jQuery'
- }
+ //  externals: {
+ //    $: 'jquery',
+ //   jquery: 'jQuery',
+ //   'window.jQuery': 'jquery'
+ // }
 };
 
 /** Modifies webpackConfig depends on mode. */

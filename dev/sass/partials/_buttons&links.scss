@@ -6,11 +6,19 @@ a {
 .refresh {
   position: absolute;
   @include d-position(1367, 40);
+  @include mobile-only {
+    @include m-position(333, 18.05);
+  }
   z-index: 10;
   &-button {
     width: 33px;
     height: 35px;
+    @include mobile-only {
+      width: 23px;
+      height: 25px;
+    }
     display: block;
     background: url('images/refresh.svg') center center no-repeat;
+    background-size: contain;
   }
 }

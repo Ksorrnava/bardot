@@ -2,6 +2,9 @@
   display: flex;
   height: 100vh;
   position: relative;
+  @include mobile-landscape {
+    min-height: 667px;
+  }
 }
 
 .main {
@@ -10,6 +13,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    overflow: hidden;
   }
 }
 .layout {
@@ -25,44 +29,78 @@
       position: absolute;
       width: auto;
       transition: all .4s .3s ease-in;
+      &.notransition {
+        transition: none !important;
+        cursor: url(images/hover-cursor-2.svg), auto;
+      }
+      &.ui-draggable-dragging {
+        cursor: url(images/move-cursor-2.svg), auto;
+      }
     }
 
     &.various0 .elem {
       &.logo {
         @include d-height(39);
         @include d-position(46, 40);
+        @include mobile-only {
+          @include m-height(39);
+          @include m-position(12, 11);
+        }
       }
 
       &.bottle {
         @include d-height(780);
         @include d-position(612, 122);
+        @include mobile-only {
+          @include m-height(397.3);
+          @include m-position(143.62, 161.98);
+        }
       }
 
       &.big-spot {
         @include d-height(378);
         @include d-position(542, 354);
+        @include mobile-only {
+          @include m-height(192.54);
+          @include m-position(107.97, 280.15);
+        }
       }
 
       &.small-spot {
         @include d-height(171);
         @include d-position(602, 705);
+        @include mobile-only {
+          @include m-height(87.1);
+          @include m-position(138.53, 458.94);
+        }
       }
 
       &.guys {
         @include d-height(212);
         @include d-position(642, 675);
+        @include mobile-only {
+          @include m-height(107.98);
+          @include m-position(158.9, 434.49);
+        }
       }
 
       &.text1 {
         @include d-height(180);
         @include d-position(517.04, 71.13);
-        width: 43.4%;
         transform: rotate(-26.77deg);
+        @include mobile-only {
+          @include m-height(91.68);
+          @include m-position(95.25, 136.07);
+        }
       }
 
       &.text2 {
         @include d-height(69.12);
         @include d-position(521, 630.27);
+        @include mobile-only {
+          @include m-height(51);
+          @include m-position(78, 333);
+        }
       }
     }
 
@@ -72,41 +110,74 @@
           @include d-height(57.38);
           @include d-position(1089.31, 249.65);
           transform: rotate(116.43deg);
+          @include mobile-only {
+            @include m-height(39);
+            @include m-position(12, 11);
+            transform: rotate(0deg);
+          }
         }
 
         &.bottle {
           @include d-height(780);
           @include d-position(758.1, -329.41);
           transform: rotate(-115.97deg);
+          @include mobile-only {
+            @include m-height(520.72);
+            @include m-position(176.55, 121.38);
+            transform: rotate(157.72deg);
+          }
         }
 
         &.big-spot {
           @include d-height(378);
           @include d-position(809.94, 759.02);
           transform: rotate(-99.25deg);
+          @include mobile-only {
+            @include m-height(368.37);
+            @include m-position(236.13, -36.01);
+            transform: rotate(-164.37deg);
+          }
         }
 
         &.small-spot {
           @include d-height(171);
           @include d-position(619, -75);
+          @include mobile-only {
+            @include m-height(120);
+            @include m-position(-35.66, 392.36);
+            transform: rotate(-107.76deg);
+          }
         }
 
         &.guys {
           @include d-height(377);
           @include d-position(597, 617);
+          @include mobile-only {
+            @include m-height(120);
+            @include m-position(131.31, 546.79);
+            transform: rotate(19.86deg);
+          }
         }
 
         &.text1 {
           @include d-height(180);
           @include d-position(-64.96,238.13);
-          width: 43.4%;
           transform: rotate(-26.77deg);
+          @include mobile-only {
+            @include m-height(78.28);
+            @include m-position(-132.94, 126.03);
+          }
         }
 
         &.text2 {
           @include d-height(417);
           @include d-position(252.3, 210.44);
           transform: rotate(44.81deg);
+          @include mobile-only {
+            @include m-height(151);
+            @include m-position(-86.47, 259.44);
+            transform: rotate(31.91deg);
+          }
         }
       }
     }
@@ -115,6 +186,10 @@
       &.logo {
         @include d-height(39);
         @include d-position(46, 40);
+        @include mobile-only {
+          @include m-height(39);
+          @include m-position(12, 11);
+        }
       }
 
       &.fish {
@@ -158,7 +233,12 @@
         &.logo {
           @include d-height(273.09);
           @include d-position(-72.25, 96.65);
-          transform: rotate(-23.96deg)
+          transform: rotate(-23.96deg);
+          @include mobile-only {
+            @include m-height(39);
+            @include m-position(12, 11);
+            transform: rotate(0deg);
+          }
         }
 
         &.fish {
@@ -205,6 +285,11 @@
       &.logo {
         @include d-height(39);
         @include d-position(46, 40);
+        @include mobile-only {
+          @include m-height(39);
+          @include m-position(12, 11);
+          transform: rotate(0deg);
+        }
       }
 
       &.rooster {
@@ -251,6 +336,11 @@
           @include d-height(102.48);
           @include d-position(79.45, 819.71);
           transform: rotate(-98.7deg);
+          @include mobile-only {
+            @include m-height(39);
+            @include m-position(12, 11);
+            transform: rotate(0deg);
+          }
         }
 
         &.rooster {
