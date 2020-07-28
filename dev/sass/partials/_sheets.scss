@@ -1,0 +1,64 @@
+.page-menu {
+  .logo {
+    margin: percentage(40/1440);
+  }
+}
+.sheet {
+  padding: 40px 47px 100px 40px;
+  @include d-width(561);
+  position: absolute;
+
+  &-header {
+      writing-mode: vertical-rl;
+      width: 100%;
+      &--wrapper {
+        margin-bottom: percentage(260/1024);
+      }
+  }
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    margin: percentage(130/1024) 0;
+  }
+  &-info {
+    &--main {
+      font-size: 26px;
+      line-height: 31px;
+    }
+    &--add {
+      font-size: 12px;
+      line-height: 140%;
+    }
+  }
+  &-price {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  &-starter {
+    background-color: #fff;
+    color: $brown2;
+    @include d-position(213.75, 138);
+    cursor: url(images/claw-cursor.svg), auto;
+    &.ui-draggable-dragging {
+      cursor: url(images/hover-cursor-2.svg), auto;
+    }
+  }
+  &-main {
+    background-color: $orange;
+    color: $black;
+    @include d-position(439.5, 289);
+    cursor: url(images/fish-cursor.png), auto;
+    &.ui-draggable-dragging {
+      cursor: url(images/hover-cursor-2.svg), auto;
+    }
+  }
+  &-wine {
+    background-color: $brown;
+    color: $black;
+    @include d-position(665.25, 477.93);
+    cursor: url(images/drinks-cursor.svg), auto;
+    &.ui-draggable-dragging {
+      cursor: url(images/hover-cursor-2.svg), auto;
+    }
+  }
+}

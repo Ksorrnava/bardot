@@ -51,4 +51,14 @@
         justify-content: space-between;
       }
     }
+    .page-menu & {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: percentage(40/1440);
+      z-index: 100;
+      ul li a {
+        color: #fff;
+      }
+    }
 }

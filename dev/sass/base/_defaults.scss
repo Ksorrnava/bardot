@@ -3,20 +3,35 @@
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+// body,html{
+// 	min-height: 100vh;
+// 	overflow: hidden;
+//   @include mobile-landscape {
+//     min-height: 667px;
+//     overflow-x:hidden;
+//     overflow-y: auto;
+//   }
+// }
+
 html {
   font-size: 62.5%;
-  background: $white;
+
 }
 body {
+  min-height: 100vh;
+  	overflow: hidden;
+    @include mobile-landscape {
+      min-height: 667px;
+      overflow-x:hidden;
+      overflow-y: auto;
+    }
   font: 300 18px/22px 'SelfModern-Italic', Helvetica, Arial;
   color: #000;
   transition: all .4s .3s ease-in;
-}
-body,html{
-	min-height: 100vh;
-	overflow: hidden;
-  @include mobile-landscape {
-    min-height: 667px;
+  background: $white;
+  &.page-menu {
+    background: $brown2;
     overflow-x:hidden;
     overflow-y: auto;
   }

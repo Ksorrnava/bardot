@@ -31,10 +31,10 @@
       transition: all .4s .3s ease-in;
       &.notransition {
         transition: none !important;
-        cursor: url(images/hover-cursor-2.svg), auto;
+        cursor: url(images/move-cursor-2.svg), auto;
       }
       &.ui-draggable-dragging {
-        cursor: url(images/move-cursor-2.svg), auto;
+        cursor: url(images/hover-cursor-2.svg), auto;
       }
     }
 

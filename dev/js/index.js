@@ -5,8 +5,22 @@ require ('jquery-ui-touch-punch');
 
   'use strict';
 
+  function toggleDrag() {
+    let isDraggable = false;
+    if ( $(window).width() < 768) {
+      if(isDraggable) {
+        $('.sheet').draggable("destroy").attr('style','');
+      }
+    }
+    else {
+      isDraggable = true;
+      $('.sheet').draggable({stack: ".sheet"})
+    }
+  }
+
   $(function () {
     $( document ).ready(function() {
+
     $(".various" + new Date().getTime() % 3).css("display", "block");
     $(".layout-block").click( function() {
       $(this).addClass('mixed');
@@ -16,14 +30,21 @@ require ('jquery-ui-touch-punch');
           stack: ".draggable"
       });
       }, 1000);
-
     });
-    $(".refresh-button").click( function() {
+    $(".page-home .refresh-button").click( function() {
       $('.mixed').find('.draggable').removeClass('notransition').draggable("destroy");
       $('.draggable').attr('style','');
       $('.mixed').removeClass('mixed');
+    });
+
+    $(".page-menu .refresh-button").click( function() {
+      $('.sheet').draggable("destroy").attr('style','');
+    });
+    toggleDrag();
 
     });
+    $(window).resize(function() {
+        toggleDrag();
     });
   });
 

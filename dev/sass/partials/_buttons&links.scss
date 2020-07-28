@@ -21,4 +21,10 @@ a {
     background: url('images/refresh.svg') center center no-repeat;
     background-size: contain;
   }
+  .page-menu & {
+    .refresh-button {
+      background: url('images/refresh-menu.svg') center center no-repeat;
+      background-size: contain;
+    }
+  }
 }
