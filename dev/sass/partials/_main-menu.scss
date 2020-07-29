@@ -60,5 +60,10 @@
       ul li a {
         color: #fff;
       }
+      @include mobile-only {
+        bottom: 0;
+        padding: 3px 18px 3px 12px;
+        background-color: $brown2;
+      }
     }
 }

@@ -1,6 +1,35 @@
 .page-menu {
   .logo {
     margin: percentage(40/1440);
+    &--img {
+      height: 100%;
+      width: auto;
+      &.desktop {
+        display: block;
+      }
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+  @include mobile-only {
+    .logo {
+      position: absolute;
+      margin: 0;
+      height: 30px;
+      @include m-position(12, 11);
+      &--img {
+        &.desktop {
+          display: none;
+        }
+        &.mobile {
+          display: block;
+        }
+      }
+    }
+    .main {
+      padding-bottom: 51px;
+    }
   }
 }
 .sheet {
@@ -21,9 +50,11 @@
     margin: percentage(130/1024) 0;
   }
   &-info {
+    max-width: 80%;
     &--main {
       font-size: 26px;
       line-height: 31px;
+      margin-bottom: 8px;
     }
     &--add {
       font-size: 12px;
@@ -35,6 +66,8 @@
     line-height: 140%;
   }
   &-starter {
+    z-index: 4;
+    background: url(images/starter-back.png) no-repeat center center;
     background-color: #fff;
     color: $brown2;
     @include d-position(213.75, 138);
@@ -44,6 +77,8 @@
     }
   }
   &-main {
+    z-index: 3;
+    background: url(images/main-back.png) no-repeat right bottom;
     background-color: $orange;
     color: $black;
     @include d-position(439.5, 289);
@@ -53,12 +88,72 @@
     }
   }
   &-wine {
+    z-index: 2;
+    background: url(images/drinks-back.png) no-repeat center center;
     background-color: $brown;
     color: $black;
     @include d-position(665.25, 477.93);
     cursor: url(images/drinks-cursor.svg), auto;
     &.ui-draggable-dragging {
       cursor: url(images/hover-cursor-2.svg), auto;
+    }
+  }
+  @include mobile-only {
+    width: 100%;
+    position: static;
+    padding: 21px 25px 10px;
+
+    &.closed {
+      padding-bottom: 21px;
+      background-image: none;
+    }
+    &.open {
+      background-size: cover;
+    }
+    &-header {
+      margin: 0;
+        &--wrapper {
+          margin-bottom: 19%;
+          .closed & {
+            margin-bottom: 0;
+          }
+        }
+        .closed & {
+          writing-mode: initial;
+          text-align: right;
+          font-size: 18px;
+          line-height: 22px;
+        }
+    }
+    &-content {
+      .closed & {
+        height: 0;
+        visibility: hidden;
+        .sheet-row {
+          margin: 0;
+        }
+      }
+    }
+    &-row {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-info {
+      &--main {
+        font-size: 17.4px;
+        line-height: 21px;
+        margin-bottom: 5px;
+      }
+      &--add {
+        line-height: 14px;
+      }
+    }
+    &-price {
+      font-size: 10.5px;
+    }
+    &-main {
+      color: #fff;
     }
   }
 }
