@@ -20,7 +20,28 @@
   width: 33px;
   margin-left: percentage(12/375);
   margin-bottom: 70px;
-  font-size: 11.628px;
+  font-size: 12px;
   line-height: 14px;
+
+  .horizontal & {
+    height: auto;
+    width: auto;
+    color: $brown;
+    flex-direction: column-reverse;
+    justify-content: start;
+      margin-bottom: 42px;
+    a {
+      color: $brown;
+    }
+    &-block {
+      margin-bottom: 17px;
+    }
+    .rotate {
+      writing-mode: initial;
+      display: block;
+      transform:none;
+
+    }
+  }
 }
 }

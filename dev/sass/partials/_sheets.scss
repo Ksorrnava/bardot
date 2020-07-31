@@ -12,11 +12,15 @@
       }
     }
   }
+  .sheet-link {
+    display: none;
+  }
   @include mobile-only {
     .logo {
       position: absolute;
       margin: 0;
       height: 30px;
+      z-index: 5;
       @include m-position(12, 11);
       &--img {
         &.desktop {
@@ -27,8 +31,65 @@
         }
       }
     }
+    .sheet-link {
+      display: none;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: normal;
+      padding: 21px 25px;
+      width: 100%;
+      text-align: right;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      transition: all.4s .3s ease-in;
+      &--starter {
+        color: $brown2;
+        background: #fff;
+      }
+      &--main {
+        color: #fff;
+        background: $orange;
+        top: 61px;
+      }
+      &--wine {
+        background: $brown;
+        top: unset;
+        bottom: 51px;
+      }
+    }
+
     .main {
-      padding-bottom: 51px;
+      &.main-bottom {
+        .sheet-link--main {
+          display: block;
+          top: unset;
+          bottom: 117px;
+        }
+      }
+      &.wine-bottom {
+        .sheet-link--wine {
+          display: block;
+        }
+      }
+      &.starter-top {
+        .sheet-main{
+          padding-top: 67px;
+        }
+        .sheet-link--starter {
+          display: block;
+        }
+      }
+      &.main-top {
+        .sheet-wine {
+          padding-top: 132px
+        }
+        .sheet-link--main {
+          display: block;
+        }
+      }
     }
   }
 }
@@ -36,6 +97,10 @@
   padding: 40px 47px 100px 40px;
   @include d-width(561);
   position: absolute;
+
+  &.changeCursor {
+    cursor: url(images/hover-cursor-2.svg), auto;
+  }
 
   &-header {
       writing-mode: vertical-rl;
@@ -101,22 +166,15 @@
   @include mobile-only {
     width: 100%;
     position: static;
-    padding: 21px 25px 10px;
+    padding: 0;
+    background-size: cover;
+    //scroll-margin-top: 200px;
 
-    &.closed {
-      padding-bottom: 21px;
-      background-image: none;
-    }
-    &.open {
-      background-size: cover;
-    }
     &-header {
       margin: 0;
+      padding: 21px 25px;
         &--wrapper {
-          margin-bottom: 19%;
-          .closed & {
-            margin-bottom: 0;
-          }
+          margin-bottom: 0;
         }
         .closed & {
           writing-mode: initial;
@@ -126,12 +184,10 @@
         }
     }
     &-content {
+      padding: 0 25px 10px;
       .closed & {
         height: 0;
-        visibility: hidden;
-        .sheet-row {
-          margin: 0;
-        }
+        display: none;
       }
     }
     &-row {

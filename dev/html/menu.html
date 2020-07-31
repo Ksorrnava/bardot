@@ -8,10 +8,13 @@
     <div class="refresh">
       <span class="refresh-button"></span>
     </div>
-    <div class="main">
-      <div class="sheet sheet-starter open">@@include('sheet-starter.html')</div>
-      <div class="sheet sheet-main closed">@@include('sheet-main.html')</div>
-      <div class="sheet sheet-wine closed">@@include('sheet-wine.html')</div>
+    <div class="main main-bottom wine-bottom">
+      <div class="sheet-link sheet-link--starter" data-elem="sheet-starter">Starter</div>
+      <div class="sheet-link sheet-link--main" data-elem="sheet-main">Main</div>
+      <div class="sheet-link sheet-link--wine" data-elem="sheet-wine">Drinks</div>
+      <div class="sheet sheet-starter">@@include('sheet-starter.html')</div>
+      <div class="sheet sheet-main">@@include('sheet-main.html')</div>
+      <div class="sheet sheet-wine">@@include('sheet-wine.html')</div>
     </div>
       @@include('menu.html')
   </div>
