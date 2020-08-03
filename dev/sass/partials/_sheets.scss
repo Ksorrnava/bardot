@@ -17,7 +17,7 @@
   }
   @include mobile-only {
     .logo {
-      position: absolute;
+      position: fixed;
       margin: 0;
       height: 30px;
       z-index: 5;
@@ -76,18 +76,26 @@
       }
       &.starter-top {
         .sheet-main{
-          padding-top: 67px;
+          padding-top: 66px;
         }
         .sheet-link--starter {
           display: block;
         }
       }
       &.main-top {
-        .sheet-wine {
-          padding-top: 132px
-        }
+        // .sheet-wine {
+        //   padding-top: 66px
+        // }
         .sheet-link--main {
           display: block;
+        }
+      }
+      &.starter-top.main-top {
+        .sheet-main {
+          padding-top: 0;
+        }
+        .sheet-wine {
+          padding-top: 132px
         }
       }
     }

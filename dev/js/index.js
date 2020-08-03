@@ -22,15 +22,21 @@ require ('jquery-ui-touch-punch');
       });
     }
   }
-
+  function calcVH() {
+    if ($(window).width() < 768) {
+      $('body.page-home').height(window.innerHeight + 'px');
+    } else {
+        $('body.page-home').attr('style','');
+    }
+  }
   function menuScroll() {
-    if ( $(window).width() < 768) {
+    if ( $(window).width() < 768 && $('body').hasClass('page-menu')) {
       let starter = $('.sheet-starter').offset().top;
       let main = $('.sheet-main').offset().top;
       let wine = $('.sheet-wine').offset().top;
       let wrapper = $('.page-menu .main');
 
-      $(window).on('scroll', function() {
+      $(window).on('load scroll', function() {
         if($(this).scrollTop() <= starter) {
           wrapper.removeClass('starter-top');
           wrapper.addClass('main-bottom wine-bottom');
@@ -43,26 +49,20 @@ require ('jquery-ui-touch-punch');
           }
         } else if($(this).scrollTop() >= wine-1) {
           wrapper.addClass('main-top');
+          if(!wrapper.hasClass('starter-top')) {
+            wrapper.addClass('starter-top')
+          }
           wrapper.removeClass('wine-bottom');
           wrapper.removeClass('main-bottom');
         }
       })
 
-      $('.sheet-link').click( function() {
+      $('.page-menu .sheet-link').click( function() {
         let el = $(this).data("elem")
         let pos = $(`.${el}`).offset().top;
         if (el == 'sheet-starter') {
           pos = 0
-        } 
-        // else if (el == 'sheet-main') {
-        //   console.log(pos)
-        //   pos = pos-66
-        //   console.log(pos)
-        // }else if (el == 'sheet-wine') {
-        //   console.log(pos)
-        //   pos = pos-132
-        //   console.log(pos)
-        // }
+        }
         $("html, body").animate({ scrollTop: pos }, 1000);
       });
     }
@@ -91,11 +91,13 @@ require ('jquery-ui-touch-punch');
       $('.sheet').draggable("destroy").attr('style','');
     });
     toggleDrag();
-    menuScroll()
+    menuScroll();
+    calcVH();
     });
     $(window).resize(function() {
         toggleDrag();
         menuScroll();
+        calcVH();
     });
   });
 
