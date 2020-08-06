@@ -26,6 +26,7 @@ a {
     .refresh-button {
       background: url('images/refresh-menu.svg') center center no-repeat;
       background-size: contain;
+      position: fixed;
       @include mobile-only {
         display: none;
       }

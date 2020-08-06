@@ -1,6 +1,10 @@
 .page-menu {
   .logo {
-    margin: percentage(40/1440);
+    position: fixed;
+    @include d-height(39);
+    @include d-position(46, 40);
+    z-index: 10;
+
     &--img {
       height: 100%;
       width: auto;
@@ -130,7 +134,7 @@
       margin-bottom: 8px;
     }
     &--add {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 140%;
     }
   }
@@ -141,6 +145,7 @@
   &-starter {
     z-index: 4;
     background: url(images/starter-back.png) no-repeat center center;
+    background-size: cover;
     background-color: #fff;
     color: $brown2;
     @include d-position(213.75, 138);
@@ -163,6 +168,7 @@
   &-wine {
     z-index: 2;
     background: url(images/drinks-back.png) no-repeat center center;
+    background-size: contain;
     background-color: $brown;
     color: $black;
     @include d-position(665.25, 477.93);
@@ -210,6 +216,7 @@
         margin-bottom: 5px;
       }
       &--add {
+        font-size: 12px;
         line-height: 14px;
       }
     }

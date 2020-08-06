@@ -294,40 +294,75 @@
       }
 
       &.rooster {
-        @include d-height(440.15);
+        //@include d-height(440.15);
+        @include d-width(526.4)
         @include d-position(465.88, 342.56);
         transform: rotate(-7.33deg);
+        @include mobile-only {
+          @include d-height(440.15);
+          width: auto;
+        }
       }
 
       &.big-spot {
-        @include d-height(455.07);
+        @include d-width(271.74)
+        //@include d-height(455.07);
         @include d-position(593.21, 143);
+        @include mobile-only {
+          @include d-height(455.07);
+          width: auto;
+        }
       }
 
       &.small-spot {
-        @include d-height(151.07);
+        @include d-width(111.21)
+      //  @include d-height(151.07);
         @include d-position(810.69, 234.59);
+        @include mobile-only {
+          @include d-height(151.07);
+          width: auto;
+        }
       }
 
       &.person {
-        @include d-height(215.76);
+        //@include d-height(215.76);
+        @include d-width(57.82)
         @include d-position(893.61, 109.26);
+        @include mobile-only {
+          @include d-height(215.76);
+          width: auto;
+        }
       }
 
       &.text1 {
-        @include d-height(131.21);
+        @include d-width(86.85)
+        //@include d-height(131.21);
         @include d-position(641.81, 658.4);
+        @include mobile-only {
+          @include d-height(131.21);
+          width: auto;
+        }
       }
 
       &.text2 {
-        @include d-height(129.46);
+        @include d-width(657.91)
+        //@include d-height(129.46);
         @include d-position(231.68, 320.93);
         transform: rotate(10.72deg);
+        @include mobile-only {
+          @include d-height(129.46);
+          width: auto;
+        }
       }
 
       &.leaves {
-        @include d-height(578.2);
+        @include d-width(386.12)
+        //@include d-height(578.2);
         @include d-position(561.17, 370.54);
+        @include mobile-only {
+          @include d-height(578.2);
+          width: auto;
+        }
       }
     }
 
@@ -345,44 +380,79 @@
         }
 
         &.rooster {
-          @include d-height(324.43);
+          @include d-width(388)
+          //@include d-height(324.43);
           @include d-position(627.22, 490.87);
           transform: rotate(-144.92deg);
+          @include mobile-only {
+            @include d-height(324.43);
+            width: auto;
+          }
         }
 
         &.big-spot {
-          @include d-height(692.57);
+          @include d-width(413.56)
+        //  @include d-height(692.57);
           @include d-position(649.05, -242.99);
           transform: rotate(-145.48deg);
+          @include mobile-only {
+            @include d-height(692.57);
+            width: auto;
+          }
         }
 
         &.small-spot {
-          @include d-height(162);
+          @include d-width(119.26)
+          //@include d-height(162);
           @include d-position(247.77, 424.79);
           transform: rotate(-76.4deg);
+          @include mobile-only {
+            @include d-height(162);
+            width: auto;
+          }
         }
 
         &.person {
-          @include d-height(251.85);
+          @include d-width(67.49)
+          //@include d-height(251.85);
           @include d-position(1081.94, 157.98);
           transform: rotate(64.49deg);
+          @include mobile-only {
+            @include d-height(251.85);
+            width: auto;
+          }
         }
 
         &.text1 {
-          @include d-height(151);
+          @include d-width(99)
+          //@include d-height(151);
           @include d-position(1318, 626);
+          @include mobile-only {
+            @include d-height(151);
+            width: auto;
+          }
         }
 
         &.text2 {
-          @include d-height(663.59);
+          @include d-width(3372.31)
+          //@include d-height(663.59);
           @include d-position(-1471.75, -221.66);
           transform: rotate(43.26deg);
+          @include mobile-only {
+            @include d-height(663.59);
+            width: auto;
+          }
         }
 
         &.leaves {
-          @include d-height(1015.37);
+          @include d-width(678.06)
+          //@include d-height(1015.37);
           @include d-position(-31.63, 605.04);
           transform: rotate(-71.24deg);
+          @include mobile-only {
+            @include d-height(1015.37);
+            width: auto;
+          }
         }
       }
     }

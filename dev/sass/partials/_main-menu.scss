@@ -3,7 +3,7 @@
   z-index: 2;
   &--main {
     text-align: right;
-    margin-right: percentage(263/1440);
+    margin-right: 5px;
     font-size: 24px;
     line-height: 29px;
       @include mobile-only {
